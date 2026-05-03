@@ -6,6 +6,117 @@
 <title>Angelo Bryan Ayoso - Portfolio</title>
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
 <style>
+#moments {
+  padding: 5rem 6rem;
+}
+
+.moments-gallery {
+  display: flex;
+  flex-direction: row;
+  gap: 1.5rem;
+  margin-top: 2.5rem;
+  align-items: stretch;
+}
+
+.moment-item {
+  flex: 1;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.moment-item:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.22);
+}
+
+.moment-item img {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  #moments {
+    padding: 3rem 1.5rem;
+  }
+
+  .moments-gallery {
+    flex-direction: column;
+  }
+
+  .moment-item img {
+    height: 240px;
+  }
+}
+
+
+
+
+#hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3rem;
+  padding: 4rem 6rem;
+  min-height: 100vh;
+}
+
+.hero-text {
+  flex: 1;
+  max-width: 560px;
+}
+
+.hero-visual {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-photo-wrapper {
+  width: 340px;
+  height: 420px;
+  border-radius: 2rem;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+}
+
+.hero-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  display: block;
+}
+
+/* Responsive: stack on mobile */
+@media (max-width: 768px) {
+  #hero {
+    flex-direction: column;
+    padding: 3rem 1.5rem;
+    text-align: center;
+  }
+
+  .hero-photo-wrapper {
+    width: 220px;
+    height: 280px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
   *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
   :root {
@@ -33,7 +144,7 @@
   /* NAV */
   nav {
     position: fixed; top: 0; width: 100%; z-index: 999;
-    background: rgba(250,248,244,0.92);
+    background: rgba(251, 184, 84, 0.92);
     backdrop-filter: blur(12px);
     border-bottom: 1px solid var(--border);
     padding: 0 2rem;
@@ -242,41 +353,31 @@
 <body>
 
 <nav>
-  <a href="#hero" class="nav-logo">Angelo Ayoso</a>
+  <a href="#hero" class="nav-logo">My Portfolio</a>
   <button class="hamburger" id="ham" aria-label="Menu">
     <span></span><span></span><span></span>
   </button>
   <ul class="nav-links" id="nav-links">
     <li><a href="#about">About</a></li>
     <li><a href="#skills">Skills</a></li>
-    <li><a href="#projects">Projects</a></li>
+    <li><a href="#moments">Moments</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
 </nav>
 
 <section id="hero">
   <div class="hero-text">
-    <span class="hero-tag">Available for work</span>
     <h1 class="hero-name">Angelo<br><em>Bryan</em> Ayoso</h1>
-    <p class="hero-sub">Web developer & designer crafting modern digital experiences from Quezon City, PH.</p>
+    <p class="hero-sub">I’m someone who enjoys staying active and creative. I love playing basketball, whether it’s for fun or competition, and I’m a big fan of anime it’s one of my favorite ways to relax and get inspired. I also enjoy photography, capturing moments and perspectives that tell a story.</p>
     <div class="hero-cta">
-      <a href="#projects" class="btn-primary">View my work</a>
+      
       <a href="#contact" class="btn-ghost">Get in touch</a>
     </div>
   </div>
+<!-- front page  -->
   <div class="hero-visual">
-    <div class="hero-card">
-      <p class="hero-card-label">Years of experience</p>
-      <p class="hero-card-stat">3+</p>
-      <p class="hero-card-sub">Building for the web</p>
-      <div class="hero-card-skills">
-        <span class="tag">React</span>
-        <span class="tag">Node.js</span>
-        <span class="tag">JavaScript</span>
-        <span class="tag">HTML/CSS</span>
-        <span class="tag">Firebase</span>
-        <span class="tag">Chart.js</span>
-      </div>
+    <div class="hero-photo-wrapper">
+      <img src="IMG_20260216_104335_456-removebg-preview.png" alt="Angelo Bryan Ayoso" class="hero-photo" />
     </div>
   </div>
 </section>
@@ -285,34 +386,34 @@
   <div class="section-inner">
     <p class="section-label reveal">About me</p>
     <h2 class="section-title reveal">Passionate about building<br>things that matter</h2>
-    <p class="section-desc reveal">I'm a developer who loves turning ideas into fast, beautiful, and accessible web experiences. I'm always learning and pushing boundaries with new tools and technologies.</p>
+    <p class="section-desc reveal">I'm a student who loves turning ideas into fast, beautiful, and accessible experiences. I'm always learning and pushing boundaries with new tools and technologies.</p>
     <div class="about-grid reveal">
       <div class="about-items">
         <div class="about-item">
-          <h4>Frontend Development</h4>
-          <p>Semantic HTML, modern CSS, and JavaScript to build responsive, accessible UIs.</p>
+          <h4>As an It student</h4>
+          <p>Student who is passionate about learning how computers and technology work. I study topics like programming, photography, and networking, which help me understand how to create and manage digital systems. Being an IT student allows me to develop problem-solving skills and prepare for a future career in the industry.</p>
         </div>
         <div class="about-item">
-          <h4>Backend & APIs</h4>
-          <p>Node.js and Firebase for building scalable server-side solutions and real-time apps.</p>
+          <h4>Hobbies</h4>
+          <p>I like to play basketball and watch anime all the time. Im always sleeping when theres a free time, i also love to hangout with my friends and also being spontaneous with my classmates. </p>
         </div>
         <div class="about-item">
-          <h4>UI Design</h4>
-          <p>Designing clean, user-centered interfaces with an eye for detail and aesthetics.</p>
+          <h4>Favorite Food</h4>
+          <p>I like spaghetti, sushi, pizza and cookies.</p>
         </div>
       </div>
       <div class="about-items">
         <div class="about-item">
           <h4>Location</h4>
-          <p>Quezon City, Philippines — open to remote opportunities worldwide.</p>
+          <p>Camarin Caloocan City Philippines</p>
         </div>
         <div class="about-item">
           <h4>Education</h4>
-          <p>Self-driven learner complemented by formal computer science fundamentals.</p>
+          <p>Currently a 2nd year student that strives for greatness.</p>
         </div>
         <div class="about-item">
           <h4>Currently learning</h4>
-          <p>TypeScript, Next.js, and modern design systems at scale.</p>
+          <p>HTML, Css and many other things that im interested in.</p>
         </div>
       </div>
     </div>
@@ -321,98 +422,76 @@
 
 <section id="skills">
   <div class="section-inner">
-    <p class="section-label reveal">What I work with</p>
+    
     <h2 class="section-title reveal">Skills & tools</h2>
     <div class="skills-grid">
       <div class="skill-card reveal">
         <span class="skill-icon">✦</span>
         <h3>HTML / CSS</h3>
-        <p>Semantic markup, Flexbox, Grid, animations, and responsive design.</p>
-        <div class="skill-bar"><div class="skill-fill" style="width:95%"></div></div>
+        <p>I currently learning about HTML and CSS. theres a lot of strtuggle studying about this two and it takes time to learn about it, i hope i can be good at this things someday</p>
+        
       </div>
       <div class="skill-card reveal">
         <span class="skill-icon">◈</span>
         <h3>JavaScript</h3>
-        <p>ES6+, async patterns, DOM manipulation, and modern APIs.</p>
-        <div class="skill-bar"><div class="skill-fill" style="width:88%"></div></div>
+        <p>We use a lot of this when we were in freshmen years. Before when i was in 1st year i struggle at first but i cope up with the short amount of tine </p>
+       
       </div>
       <div class="skill-card reveal">
         <span class="skill-icon">⬡</span>
-        <h3>React</h3>
-        <p>Component architecture, hooks, state management, and performance.</p>
-        <div class="skill-bar"><div class="skill-fill" style="width:82%"></div></div>
+        <h3>Photoshop</h3>
+        <p>I love taking pictures. sometimes i edit my photo in adobe photoshop im not that expert about it by using the application but i hope i can be good someday.</p>
+        
       </div>
       <div class="skill-card reveal">
         <span class="skill-icon">◉</span>
-        <h3>Node.js</h3>
-        <p>REST APIs, Express, server-side rendering, and backend logic.</p>
-        <div class="skill-bar"><div class="skill-fill" style="width:75%"></div></div>
+        <h3>Video Editing</h3>
+        <p>i can edit and make videos im positive about my filming skills and i hope i master it someday</p>
+        
       </div>
     </div>
   </div>
 </section>
 
-<section id="projects">
+<section id="moments">
   <div class="section-inner">
-    <p class="section-label reveal">Selected work</p>
-    <h2 class="section-title reveal">Projects</h2>
-    <p class="section-desc reveal">A selection of things I've built — from e-commerce to real-time apps and data visualization tools.</p>
-    <div class="projects-grid">
-      <div class="project-card reveal">
-        <p class="project-num">01</p>
-        <h3>E-Commerce Platform</h3>
-        <p>A fully responsive online store with cart, filtering, and checkout flow built with React and Tailwind CSS.</p>
-        <div class="project-tags">
-          <span class="project-tag">React</span>
-          <span class="project-tag">Tailwind</span>
-          <span class="project-tag">REST API</span>
-        </div>
-        <a href="#" class="project-link">Live demo</a>
+    <h2 class="section-title reveal">Moments</h2>
+    <p class="section-desc reveal">Here's the moments of my 2nd year. The 1st photo was taken on exibhit,i enjoyed the 2 days of the exibhit and it was a fun experience there is a lot of great product there our hardwork payoff. In the 2nd photo it was also in the exibhit and our product is getting analyze by the judge we are very nervous out there. The 3rd photo was a great filming experience we have a lot of nice actors and it was easy to work with them.   </p>
+
+    <div class="moments-gallery">
+      <div class="moment-item reveal">
+        <img src="2026_0424_13233500.jpg" alt="BreakSmart project showcase with team" />
       </div>
-      <div class="project-card reveal">
-        <p class="project-num">02</p>
-        <h3>Task Management App</h3>
-        <p>Real-time collaborative task manager with drag-and-drop, live updates, and user authentication via Firebase.</p>
-        <div class="project-tags">
-          <span class="project-tag">React</span>
-          <span class="project-tag">Firebase</span>
-          <span class="project-tag">Real-time</span>
-        </div>
-        <a href="#" class="project-link">Live demo</a>
+      <div class="moment-item reveal">
+        <img src="IMG_20260424_114317_760.jpg" alt="Demonstrating BreakSmart to a judge" />
       </div>
-      <div class="project-card reveal">
-        <p class="project-num">03</p>
-        <h3>Portfolio Dashboard</h3>
-        <p>Interactive analytics dashboard visualizing financial data with custom Chart.js graphs and dynamic filters.</p>
-        <div class="project-tags">
-          <span class="project-tag">JavaScript</span>
-          <span class="project-tag">Chart.js</span>
-          <span class="project-tag">Node.js</span>
-        </div>
-        <a href="#" class="project-link">Live demo</a>
+      <div class="moment-item reveal">
+        <img src="2026_0408_19375200.jpg" alt="Demonstrating BreakSmart to a judge" />
       </div>
     </div>
   </div>
 </section>
+
 
 <section id="contact">
   <div class="section-inner">
     <p class="section-label reveal">Get in touch</p>
-    <h2 class="section-title reveal">Let's build something<br>together</h2>
+    <h2 class="section-title reveal">Heres my conatct info<br></h2>
     <p class="section-desc reveal" style="margin: 0 auto; text-align: center; max-width: 420px;">
-      Whether it's a new project, a collaboration, or just a chat — my inbox is always open.
+      If you need something with me just contact me on  my:
     </p>
-    <a href="mailto:angelobryan@example.com" class="contact-email reveal">angelobryan@example.com</a>
+    
     <div class="contact-links reveal">
-      <a href="https://linkedin.com/in/yourprofile" class="contact-link">LinkedIn</a>
-      <a href="https://github.com/yourusername" class="contact-link">GitHub</a>
-      <a href="mailto:angelobryan@example.com" class="contact-link">Email</a>
+      <a href="https://www.facebook.com/angelobryan.ayoso/" class="contact-link">Facebook</a>
+      <a href="https://github.com/AyosoBryan" class="contact-link">GitHub</a>
+      <a href="https://mail.google.com/mail/u/0/#inbox" class="contact-link">Email</a>
+      <a href="https://www.instagram.com/angelo_bryan03" class="contact-link">Instagram</a>
     </div>
   </div>
 </section>
 
 <footer>
-  <p>© 2026 Angelo Bryan Ayoso &middot; Quezon City, PH</p>
+  <p>© 2026 Angelo Bryan Ayoso &middot; Camarin Caloocan City, PH</p>
 </footer>
 
 <script>
